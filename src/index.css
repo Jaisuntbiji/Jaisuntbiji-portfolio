@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    25% {
+      transform: translateY(-5px) rotate(1deg);
+    }
+    50% {
+      transform: translateY(-10px) rotate(0deg);
+    }
+    75% {
+      transform: translateY(-5px) rotate(-1deg);
+    }
+  }
+}
+
+body {
+  font-family: 'JetBrains Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  background-color: #000;
+  color: #00ff00;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar for terminal */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00ff00;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00cc00;
+}
+
+/* Terminal cursor animation */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.terminal-cursor {
+  animation: blink 1s infinite;
+}
+
+/* Green terminal glow effect */
+.text-green-400 {
+  text-shadow: 0 0 5px rgba(34, 197, 94, 0.5);
+}
+
+.text-green-300 {
+  text-shadow: 0 0 3px rgba(34, 197, 94, 0.3);
+}
+
+/* Input focus glow */
+input:focus {
+  text-shadow: 0 0 5px rgba(34, 197, 94, 0.5);
+}
+
+/* ID Card hanging effect */
+.animate-float {
+  transform-origin: top center;
+}
+
+/* Terminal window styling */
+.font-mono {
+  font-family: 'JetBrains Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .w-1/2 {
+    width: 100%;
+  }
+  
+  .flex {
+    flex-direction: column;
+  }
+  
+  .absolute.right-8.top-8 {
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .w-80 {
+    width: 16rem;
+  }
+  
+  .text-xl {
+    font-size: 1.125rem;
+  }
+  
+  .p-6 {
+    padding: 1rem;
+  }
+}
+
+/* Enhanced terminal styling */
+.bg-gray-900\/90 {
+  background-color: rgba(17, 24, 39, 0.9);
+}
+
+/* Syntax highlighting for commands */
+.command-highlight {
+  color: #22d3ee;
+}
+
+.output-highlight {
+  color: #a3e635;
+}
+
+/* Card border glow */
+.border-green-400\/50 {
+  border-color: rgba(34, 197, 94, 0.5);
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.2);
+}
+
+/* Hanging chain effect */
+.hanging-chain {
+  background: linear-gradient(to bottom, #6b7280, #4b5563);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
