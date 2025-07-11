@@ -94,8 +94,6 @@ const App: React.FC = () => {
       "Selenium WebDriver Certification",
     ],
     contact: {
-      email: "jaisuntbiji890@gmail.com",
-      phone: "+91 99479 22453",
       github: "https://github.com/Jaisuntbiji",
       linkedin: "https://linkedin.com/in/jaisun-t-biji",
     },
@@ -133,8 +131,6 @@ const App: React.FC = () => {
     },
     experience: () => portfolioData.experience,
     contact: () => [
-      `Email: ${portfolioData.contact.email}`,
-      `Phone: ${portfolioData.contact.phone}`,
       `GitHub: ${portfolioData.contact.github}`,
       `LinkedIn: ${portfolioData.contact.linkedin}`,
       "",
@@ -350,14 +346,6 @@ const App: React.FC = () => {
                 <div className="flex items-center justify-center space-x-1">
                   <MapPin className="w-3 h-3" />
                   <span>{portfolioData.location}</span>
-                </div>
-                <div className="flex items-center justify-center space-x-1">
-                  <Mail className="w-3 h-3" />
-                  <span>{portfolioData.contact.email}</span>
-                </div>
-                <div className="flex items-center justify-center space-x-1">
-                  <Phone className="w-3 h-3" />
-                  <span>{portfolioData.contact.phone}</span>
                 </div>
               </div>
 
